@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+    font-family: Objectivity;
+    src: url('fonts/Objectivity-Regular.otf') format('opentype')
+}
+@font-face {
+    font-family: Objectivity;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Objectivity-Bold.otf') format('opentype');
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -5,4 +17,89 @@ body {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+}
+header {
+    display: grid;
+    width: 100%;
+    height: 104px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    div#logo {
+        position: absolute;
+        width: 135px;
+        height: 49px;
+        left: 108px;
+        top: 27px;
+        background: #000000;
+        color: #ffffff;
+        font-family: Objectivity;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: a;
+        cursor: default;
+    }
+    div#navlinks {
+        display: flex;
+        align-items: center;
+        grid-area: b;
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin-right: 40px;
+                a {
+                    color: #000000;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                a.cta {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                    line-height: 150%;
+                    color: #ffffff;
+                    background: #F2707C;
+                    width: 131px;
+                    height: 40px;
+                    border-radius: 4px;
+                    transition: all 0.1s;
+                    &:hover {
+                        transition: all 0.1s;
+                        text-decoration: none;
+                        background: #ff7784;
+                    }
+                }
+            }
+        }
+    }
+}
+section#hero {
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div#herotext {
+        width: auto;
+        
+        margin-right: 10px;
+        h1 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 130%;
+        }
+    }
+    div#heroimg {
+        margin-left: 10px;
+    }
 }
