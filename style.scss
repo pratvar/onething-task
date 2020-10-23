@@ -31,19 +31,17 @@ ul {
 }
 header {
     margin:0;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 104px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "a b";
+    padding: 0 108px;
     div#logo {
-        position: absolute;
         width: 135px;
         height: 49px;
-        left: 108px;
-        top: 27px;
-        background: #000000;
-        color: #ffffff;
+        background: #000;
+        color: #fff;
         font-family: Objectivity;
         font-style: normal;
         font-weight: bold;
@@ -64,7 +62,7 @@ header {
             justify-content: center;
             align-items: center;
             li {
-                margin-right: 40px;
+                margin-left: 40px;
                 a {
                     color: #000000;
                     font-family: Roboto;
@@ -98,16 +96,46 @@ section#hero {
     justify-content: center;
     align-items: center;
     padding: 80px 0;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     div#herotext {
-        width: min-content;
-        
+        width: 496px !important;
+        align-self: center;
+        font-family: Roboto;
         margin-right: 10px;
         h1 {
-            font-family: Roboto;
             font-style: normal;
             font-weight: 500;
             font-size: 48px;
             line-height: 130%;
+            margin-bottom: 16px;
+        }
+        p {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 150%;
+            margin-bottom: 24px;
+        }
+        a {
+            font-size: 18px;
+            line-height: 150%;
+            background: #F2707C;
+            border-radius: 30px;
+            width: 172px;
+            height: 43px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.1s;
+            &:hover {
+                transition: all 0.1s;
+                text-decoration: none;
+                background: #ff7784;
+            }
         }
     }
     div#heroimg {
@@ -124,6 +152,10 @@ section#info {
     font-family: 'helvetica neue';
     h2 {
         font-weight: bold;
+        padding: 0;
+        margin: 0;
+        font-size: 40px;
+        line-height: 140%;
     }
     div#infotext {
         padding: 0;
@@ -144,6 +176,41 @@ section#info {
             font-size: 20px;
             line-height: 150%;
             width: 107px;
+        }
+    }
+}
+section#stepone {
+    div#steponeimg {
+        background: #BFE1FF;
+        display: flex;
+        justify-content: flex-end;
+    }
+    div#steponetext {
+        border-left: 24px solid #bfe1ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div {
+            width: 496px;
+        }
+        img {
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-family: Roboto;
+            margin-bottom: 16px;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 150%;
+        }
+        p {
+            width: 392px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
         }
     }
 }

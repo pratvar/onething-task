@@ -32,20 +32,18 @@ ul {
 
 header {
   margin: 0;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 104px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "a b";
+  padding: 0 108px;
 }
 header div#logo {
-  position: absolute;
   width: 135px;
   height: 49px;
-  left: 108px;
-  top: 27px;
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   font-family: Objectivity;
   font-style: normal;
   font-weight: bold;
@@ -68,7 +66,7 @@ header div#navlinks ul {
   align-items: center;
 }
 header div#navlinks ul li {
-  margin-right: 40px;
+  margin-left: 40px;
 }
 header div#navlinks ul li a {
   color: #000000;
@@ -101,16 +99,47 @@ section#hero {
   align-items: center;
   padding: 80px 0;
 }
+section#hero div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 section#hero div#herotext {
-  width: min-content;
+  width: 496px !important;
+  align-self: center;
+  font-family: Roboto;
   margin-right: 10px;
 }
 section#hero div#herotext h1 {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
   line-height: 130%;
+  margin-bottom: 16px;
+}
+section#hero div#herotext p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+section#hero div#herotext a {
+  font-size: 18px;
+  line-height: 150%;
+  background: #F2707C;
+  border-radius: 30px;
+  width: 172px;
+  height: 43px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+section#hero div#herotext a:hover {
+  transition: all 0.1s;
+  text-decoration: none;
+  background: #ff7784;
 }
 section#hero div#heroimg {
   margin-left: 10px;
@@ -127,6 +156,10 @@ section#info {
 }
 section#info h2 {
   font-weight: bold;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  line-height: 140%;
 }
 section#info div#infotext {
   padding: 0;
@@ -148,6 +181,40 @@ section#info div#infotext a {
   font-size: 20px;
   line-height: 150%;
   width: 107px;
+}
+
+section#stepone div#steponeimg {
+  background: #BFE1FF;
+  display: flex;
+  justify-content: flex-end;
+}
+section#stepone div#steponetext {
+  border-left: 24px solid #bfe1ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#stepone div#steponetext div {
+  width: 496px;
+}
+section#stepone div#steponetext img {
+  margin-bottom: 16px;
+}
+section#stepone div#steponetext h2 {
+  font-family: Roboto;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+}
+section#stepone div#steponetext p {
+  width: 392px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */
