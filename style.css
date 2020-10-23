@@ -95,7 +95,6 @@ header div#navlinks ul li a.cta:hover {
 
 section#hero {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 80px 0;
 }
@@ -105,14 +104,14 @@ section#hero div {
   justify-content: center;
 }
 section#hero div#herotext {
-  width: 496px !important;
-  align-self: center;
+  width: 496px;
+  align-self: flex-end;
   font-family: Roboto;
-  margin-right: 10px;
+  margin-right: 116px;
 }
 section#hero div#herotext h1 {
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 48px;
   line-height: 130%;
   margin-bottom: 16px;
@@ -142,7 +141,11 @@ section#hero div#herotext a:hover {
   background: #ff7784;
 }
 section#hero div#heroimg {
-  margin-left: 10px;
+  margin-left: 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 section#info {
@@ -151,10 +154,15 @@ section#info {
   color: #fff;
   padding: 93px 0;
   display: flex;
-  justify-content: center;
   font-family: "helvetica neue";
 }
+section#info div#infoheading {
+  display: flex;
+  justify-content: flex-end;
+}
 section#info h2 {
+  width: 599px;
+  margin-right: 10px;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -166,6 +174,7 @@ section#info div#infotext {
   max-width: 492px;
   font-size: 16px;
   line-height: 150%;
+  margin-left: 120px;
 }
 section#info div#infotext div {
   display: flex;
@@ -192,11 +201,11 @@ section#stepone div#steponetext {
   border-left: 24px solid #bfe1ff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 section#stepone div#steponetext div {
   width: 496px;
+  margin-left: 102px;
 }
 section#stepone div#steponetext img {
   margin-bottom: 16px;
@@ -215,6 +224,186 @@ section#stepone div#steponetext p {
   font-weight: normal;
   font-size: 24px;
   line-height: 36px;
+}
+
+section#steptwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0;
+  background: #FFE4E7;
+}
+section#steptwo div#steptwotext {
+  margin-right: 116px;
+  font-family: roboto;
+  max-width: 496px;
+  display: grid;
+  grid-gap: 16px;
+  padding: 0;
+}
+section#steptwo div#steptwotext h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+}
+section#steptwo div#steptwotext p {
+  font-size: 24px;
+  line-height: 36px;
+}
+section#steptwo .slideshow {
+  margin-left: 12px;
+  max-width: 600px;
+  height: 480px;
+  background: #ffced4;
+  border-radius: 5px;
+  padding: 0;
+}
+
+section#stepthree {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: #F7F3FF;
+}
+section#stepthree div#selectstyle {
+  height: 480px;
+  width: 600px;
+  margin-right: 24px;
+  background-color: #e5e2eb;
+}
+section#stepthree div#stepthreetext {
+  display: grid;
+  grid-gap: 16px;
+  margin-left: 116px;
+  font-family: roboto;
+  width: 495px;
+}
+section#stepthree div#stepthreetext h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+}
+section#stepthree div#stepthreetext p {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+section#faq {
+  justify-content: center;
+  padding: 80px 0;
+}
+section#faq .faqWrapper {
+  width: 808px;
+}
+section#faq .faqWrapper h2 {
+  text-align: center;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 150%;
+}
+section#faq .faqWrapper .accordion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: #fff;
+  color: #F2707C;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 32px;
+}
+section#faq .faqWrapper .accordion i {
+  font-size: 30px;
+}
+section#faq .faqWrapper .panel {
+  margin-top: 16px;
+  font-family: roboto;
+  font-size: 14px;
+  line-height: 20px;
+}
+section#faq .faqWrapper hr {
+  margin: 0;
+  margin-top: 16px;
+  border: 0;
+  border-top: 1px solid #000;
+  opacity: 0.2;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #12193B;
+  color: #fff;
+}
+footer div#footertext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 0 65px;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  line-height: 32px;
+}
+footer div#footertext span#footerheading {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+footer div#footertext a {
+  font-family: roboto;
+  width: 172px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  background: #7C7EB5;
+  color: #fff;
+  border-radius: 46px;
+  font-size: 18px;
+  line-height: 150%;
+  transition: all 0.1s;
+}
+footer div#footertext a:hover {
+  transition: all 0.1s;
+  text-decoration: none;
+  background: #8c8eca;
+}
+footer hr {
+  margin: 0;
+  margin-top: 16px;
+  border: 0;
+  border-top: 1px solid #fff;
+  opacity: 0.5;
+  width: 1224px;
+}
+footer .footerlinks {
+  padding: 65px 0 80px 0;
+  display: flex;
+  justify-content: center;
+}
+footer .footerlinks ul {
+  margin-right: 142px;
+  font-family: "helvetica neue";
+  font-size: 16px;
+  line-height: 150%;
+  display: grid;
+  grid-gap: 24px;
+  width: 166px;
+}
+footer .footerlinks ul a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
