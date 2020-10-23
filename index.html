@@ -9,6 +9,15 @@
 <body>
     <header>
         <div id="logo">AFC Inc.</div>
+        <i class="material-icons" onclick="nav()" id="navBtn">menu</i>
+        <div id="navlinks-main">
+            <ul>
+                <li><a href="#">Track Application</a></li>
+                <li><a href="#">Manage My Card</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a class="cta" href="#">Get Started</a></li>
+            </ul>
+        </div>
         <div id="navlinks">
             <ul>
                 <li><a href="#">Track Application</a></li>
@@ -19,34 +28,47 @@
         </div>
     </header>
     <section id="hero">
-        <div class="col">
-            <div id="herotext">
-                <h1>Build a Credit Card<br>That is Definitely Yours</h1>
-                <p>With the OneSync Credit Card you can customise your card the way you want</p>
-                <a href="#">Get Started</a>
-            </div>
+        <div id="herotext">
+            <h1>Build a Credit Card<br>That is Definitely Yours</h1>
+            <p>With the OneSync Credit Card you can customise your card the way you want</p>
+            <a href="#">Get Started</a>
         </div>
-        <div id="heroimg" class="col">
+        <div id="heroimg">
             <img src="images/heroimg.svg" alt="Credit Card">
         </div>
     </section>
     <section id="info">
-        <div id="infoheading">
-            <h2>The Freedom to Create<br>The Credit Card You Want</h2>
-        </div>
-        <div id="infotext">
-            <p>That's why it comes with benefits & rewards chosen by you.<br>Available in multiple designs, your card comes in a style selected by you. You can come back each year, to edit your benefits or update your style.</p>
-            <p>Your OneSync Credit Card stays true to you, year after year. It’s the only card you’ll ever need.</p>
-            <div>
-                <a href="#">Get Started</a><i class="material-icons">chevron_right</i>
+            <div id="infoheading">
+                <h2>The Freedom to Create<br>The Credit Card You Want</h2>
             </div>
-        </div>
+            <div id="infotext">
+                <p>That's why it comes with benefits & rewards chosen by you.<br>Available in multiple designs, your card comes in a style selected by you. You can come back each year, to edit your benefits or update your style.</p>
+                <p>Your OneSync Credit Card stays true to you, year after year. It’s the only card you’ll ever need.</p>
+                <div>
+                    <a href="#">Get Started</a><i class="material-icons">chevron_right</i>
+                </div>
+            </div>
+            <div id="infotext-mobile">
+                <p>Build your own Credit Card that fits in your day to day lifestyle. First, choose your rewards and then select your card design.</p>
+                <label for="city">Check if the card is available in your city</label>
+                <div>
+                    <select name="city" id="city">
+                        <option value="default" disabled selected>Select City</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Chennai">Channai</option>
+                    </select>
+                    <button type="submit">Go</button>
+                </div>
+            </div>
     </section>
+    <div class="steps">Create your own credit card in three easy steps</div>
     <section id="stepone">
         <div id="steponeimg">
-            <img src="images/steponeimg.svg" alt="Image">
+            <img class="main" src="images/steponeimg.svg" alt="Image">
+            <img class="mobile" src="images/steponeimg-mob.svg" alt="Image">
         </div>
-        <div id="steponetext" class="col">
+        <div id="steponetext">
             <div>
                 <img src="images/insurance.svg" alt="Icon">
                 <h2>Fill Eligibility Form</h2>
@@ -97,6 +119,7 @@
                 <div class="panel">
                     <p>Lorem ipsum...</p>
                 </div>
+                <hr>
             </div>
         </div>
     </section>
@@ -130,5 +153,6 @@
             </ul>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

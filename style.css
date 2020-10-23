@@ -5,7 +5,6 @@
 }
 @font-face {
   font-family: Objectivity;
-  font-style: normal;
   font-weight: bold;
   src: url("fonts/Objectivity-Bold.otf") format("opentype");
 }
@@ -53,6 +52,9 @@ header {
   box-sizing: border-box;
   padding: 0 108px;
 }
+header .material-icons {
+  display: none;
+}
 header div#logo {
   width: 135px;
   height: 49px;
@@ -69,26 +71,32 @@ header div#logo {
   cursor: default;
 }
 header div#navlinks {
+  display: none;
+}
+header div#navlinks-main {
   display: flex;
   align-items: center;
   grid-area: b;
 }
-header div#navlinks ul {
+header div#navlinks-main ul {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header div#navlinks ul li {
+header div#navlinks-main ul li {
   margin-left: 40px;
 }
-header div#navlinks ul li a {
+header div#navlinks-main ul li a {
   color: #000000;
   font-family: Roboto;
   font-size: 16px;
   line-height: 24px;
 }
-header div#navlinks ul li a.cta {
+header div#navlinks-main ul li a:hover {
+  text-decoration: underline;
+}
+header div#navlinks-main ul li a.cta {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +109,7 @@ header div#navlinks ul li a.cta {
   border-radius: 4px;
   transition: all 0.1s;
 }
-header div#navlinks ul li a.cta:hover {
+header div#navlinks-main ul li a.cta:hover {
   transition: all 0.1s;
   text-decoration: none;
   background: #ff7784;
@@ -115,7 +123,6 @@ section#hero {
 }
 section#hero div#herotext {
   width: 496px;
-  align-self: flex-end;
   font-family: Roboto;
   margin-right: 116px;
 }
@@ -168,17 +175,18 @@ section#info {
   font-family: "helvetica neue";
 }
 section#info div#infoheading {
-  display: flex;
-  justify-content: flex-end;
+  width: 599px;
 }
 section#info h2 {
-  width: 599px;
-  margin-right: 10px;
-  font-weight: bold;
   padding: 0;
   margin: 0;
+  margin-right: 10px;
+  font-weight: bold;
   font-size: 40px;
   line-height: 140%;
+}
+section#info div#infotext-mobile {
+  display: none;
 }
 section#info div#infotext {
   display: grid;
@@ -204,6 +212,10 @@ section#info div#infotext a {
   width: 107px;
 }
 
+.steps {
+  display: none;
+}
+
 section#stepone {
   display: flex;
 }
@@ -212,6 +224,12 @@ section#stepone div#steponeimg {
   display: flex;
   justify-content: flex-end;
   width: 50vw;
+}
+section#stepone div#steponeimg .mobile {
+  display: none;
+}
+section#stepone div#steponeimg .main {
+  display: block;
 }
 section#stepone div#steponetext {
   border-left: 24px solid #bfe1ff;
@@ -406,10 +424,11 @@ footer hr {
 footer .footerlinks {
   padding: 65px 0 80px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 1224px;
 }
 footer .footerlinks ul {
-  margin-right: 142px;
+  flex-grow: 1;
   font-family: "helvetica neue";
   font-size: 16px;
   line-height: 150%;
@@ -419,6 +438,296 @@ footer .footerlinks ul {
 }
 footer .footerlinks ul a {
   color: #fff;
+}
+
+@media only screen and (max-width: 1300px) {
+  header {
+    padding: 0 25px;
+  }
+
+  section#hero {
+    padding: 80px 35px;
+  }
+  section#hero div#herotext {
+    margin-right: 10px;
+    min-width: 496px;
+  }
+  section#hero div#herotext h1 {
+    font-size: 40px;
+  }
+  section#hero div#herotext p {
+    font-size: 18px;
+  }
+  section#hero img {
+    max-width: 100%;
+  }
+
+  section#info {
+    padding: 93px 25px;
+    justify-content: space-around;
+  }
+  section#info div#infoheading {
+    width: auto;
+    min-width: 375px;
+  }
+  section#info div#infoheading h2 {
+    font-size: 30px;
+  }
+  section#info div#infotext {
+    margin-left: 10px;
+  }
+
+  section#stepone div#steponeimg {
+    width: auto;
+  }
+  section#stepone div#steponeimg img {
+    width: 100%;
+  }
+  section#stepone div#steponetext div {
+    width: 350px;
+  }
+  section#stepone div#steponetext h2 {
+    font-size: 30px;
+  }
+  section#stepone div#steponetext p {
+    font-size: 18px;
+    line-height: 25px;
+    width: auto;
+  }
+
+  section#steptwo {
+    padding: 64px 25px;
+    justify-content: space-around;
+  }
+  section#steptwo div#steptwotext {
+    margin: 0;
+  }
+  section#steptwo div#steptwotext h2 {
+    font-size: 30px;
+  }
+  section#steptwo div#steptwotext p {
+    font-size: 18px;
+    line-height: 25px;
+    min-width: 300px;
+    width: auto;
+    margin-right: 20px;
+  }
+  section#steptwo .slideshow {
+    margin: 0;
+    min-width: 600px;
+  }
+
+  section#stepthree {
+    justify-content: space-between;
+  }
+  section#stepthree div#selectstyle {
+    margin: 0;
+    min-width: 600px;
+  }
+  section#stepthree div#stepthreetext {
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+  section#stepthree div#stepthreetext h2 {
+    font-size: 30px;
+  }
+  section#stepthree div#stepthreetext p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  footer hr {
+    width: 85%;
+  }
+  footer .footerlinks {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  header .material-icons {
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  header div#navlinks-main {
+    display: none;
+  }
+  header div#navlinks {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    background: #fafafa;
+    box-shadow: 0 2px 15px #424242;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+  }
+  header div#navlinks ul {
+    margin: 20px 0;
+    display: grid;
+    height: 310px;
+    justify-items: center;
+    align-items: center;
+  }
+  header div#navlinks ul li {
+    margin: 0;
+  }
+  header div#navlinks ul li a {
+    color: #000000;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  header div#navlinks ul li a:hover {
+    text-decoration: underline;
+  }
+  header div#navlinks ul li a.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 150%;
+    color: #ffffff;
+    background: #F2707C;
+    width: 131px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.1s;
+  }
+  header div#navlinks ul li a.cta:hover {
+    transition: all 0.1s;
+    text-decoration: none;
+    background: #ff7784;
+  }
+
+  section#hero {
+    flex-direction: column;
+    padding: 20px 0 48px 0;
+  }
+  section#hero div#herotext {
+    margin: 0 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "helvetica neue";
+    width: auto;
+    min-width: 350px;
+  }
+  section#hero div#herotext h1 {
+    font-size: 32px;
+    line-height: 140%;
+  }
+  section#hero div#herotext p {
+    font-size: 17px;
+    line-height: 150%;
+    padding: 0 5px;
+  }
+  section#hero div#herotext a {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    width: 160px;
+    height: 40px;
+    margin-bottom: 24px;
+  }
+  section#hero div#heroimg {
+    margin: 0 16px;
+    max-width: 500px;
+  }
+
+  section#info {
+    padding: 32px 24px 48px 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+  section#info div#infoheading {
+    max-width: 400px;
+    min-width: 315px;
+    width: 100%;
+  }
+  section#info div#infoheading h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 16px;
+  }
+  section#info div#infotext {
+    display: none;
+  }
+  section#info div#infotext-mobile {
+    display: block;
+    min-width: 315px;
+    max-width: 400px;
+  }
+  section#info div#infotext-mobile p {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+  section#info div#infotext-mobile label {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  section#info div#infotext-mobile div {
+    margin-top: 8px;
+  }
+  section#info div#infotext-mobile div select {
+    width: 240px;
+    height: 40px;
+    border-radius: 21px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 8px;
+  }
+  section#info div#infotext-mobile div select option {
+    color: #000;
+  }
+  section#info div#infotext-mobile div button {
+    width: 54px;
+    height: 40px;
+    background: #4E3F6B;
+    border-radius: 21px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    padding: 0;
+  }
+  section#info div#infotext-mobile div button:hover {
+    background: #5a497a;
+  }
+
+  .steps {
+    margin: 32px auto;
+    padding: 0 24px;
+    min-width: 327px;
+    max-width: 550px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    font-family: "helvetica neue";
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: bold;
+  }
+
+  section#stepone div#steponeimg .main {
+    display: none;
+  }
+  section#stepone div#steponeimg .mobile {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
