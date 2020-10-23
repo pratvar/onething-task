@@ -104,8 +104,8 @@ header {
 }
 section#hero {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 80px 0;
     div#herotext {
         width: 496px;
@@ -117,6 +117,7 @@ section#hero {
             font-weight: bold;
             font-size: 48px;
             line-height: 130%;
+            margin: 0;
             margin-bottom: 16px;
         }
         p {
