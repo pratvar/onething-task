@@ -279,12 +279,58 @@ section#steptwo {
         }
     }
     .slideshow {
+        position: relative;
+        display: flex;
         margin-left: 12px;
         width: 600px;
         height: 480px;
-        background: #ffced4;
-        border-radius: 5px;
         padding: 0;
+        overflow: hidden;
+        .slide {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            top: 80px;
+            height: 320px;
+            width: 208px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.5s;
+            background: #000;
+        }
+        .one {
+            right: 544px;
+            border-radius: 10px;
+        }
+        .two {
+            top: 40px;
+            right: 136px;
+            height: 400px;
+            width: 328px;
+            border-radius: 15px;
+            z-index: 1;
+        }
+        .three {
+            right: -144px;
+            border-radius: 10px;
+        }
+        .hasContent {
+            background: #39060d;
+            overflow: hidden;
+            .slideimage {
+                width: 100%;
+            }
+            .slideinfo {
+                box-sizing: border-box;
+                width: 100%;
+                display: flex;
+                padding: 0 29px;  
+                padding-bottom: 43px;        
+            }
+        }
     }
 }
 section#stepthree {
@@ -775,6 +821,23 @@ footer {
             margin-bottom: 16px;
             background: #FFE4E7;
             border-radius: 0;
+            .slide {
+                height: 202px;
+                width: 166px;
+                top: 35px;
+            }
+            .one {
+                right: 304px;
+            }
+            .two {
+                top: 24px;
+                right: 72px;
+                height: 224px;
+                width: 184px;
+            }
+            .three {
+                right: -144px;
+            }
         }
         div#steptwotext {
             display: none;
@@ -852,6 +915,22 @@ footer {
             .remove {
                 display: none;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: 64px;
+        padding: 0 21px;
+        div#logo {
+            width: 102px;
+            height: 37px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        .material-icons {
+            font-size: 32px;
         }
     }
 }

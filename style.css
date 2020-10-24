@@ -290,12 +290,58 @@ section#steptwo div#steptwotext p {
   line-height: 36px;
 }
 section#steptwo .slideshow {
+  position: relative;
+  display: flex;
   margin-left: 12px;
   width: 600px;
   height: 480px;
-  background: #ffced4;
-  border-radius: 5px;
   padding: 0;
+  overflow: hidden;
+}
+section#steptwo .slideshow .slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top: 80px;
+  height: 320px;
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
+  background: #000;
+}
+section#steptwo .slideshow .one {
+  right: 544px;
+  border-radius: 10px;
+}
+section#steptwo .slideshow .two {
+  top: 40px;
+  right: 136px;
+  height: 400px;
+  width: 328px;
+  border-radius: 15px;
+  z-index: 1;
+}
+section#steptwo .slideshow .three {
+  right: -144px;
+  border-radius: 10px;
+}
+section#steptwo .slideshow .hasContent {
+  background: #39060d;
+  overflow: hidden;
+}
+section#steptwo .slideshow .hasContent .slideimage {
+  width: 100%;
+}
+section#steptwo .slideshow .hasContent .slideinfo {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  padding: 0 29px;
+  padding-bottom: 43px;
 }
 
 section#stepthree {
@@ -805,6 +851,23 @@ footer .footerlinks ul a:hover {
     background: #FFE4E7;
     border-radius: 0;
   }
+  section#steptwo .slideshow .slide {
+    height: 202px;
+    width: 166px;
+    top: 35px;
+  }
+  section#steptwo .slideshow .one {
+    right: 304px;
+  }
+  section#steptwo .slideshow .two {
+    top: 24px;
+    right: 72px;
+    height: 224px;
+    width: 184px;
+  }
+  section#steptwo .slideshow .three {
+    right: -144px;
+  }
   section#steptwo div#steptwotext {
     display: none;
   }
@@ -883,6 +946,21 @@ footer .footerlinks ul a:hover {
   }
   footer .footerlinks .remove {
     display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    height: 64px;
+    padding: 0 21px;
+  }
+  header div#logo {
+    width: 102px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  header .material-icons {
+    font-size: 32px;
   }
 }
 
