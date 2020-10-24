@@ -216,6 +216,10 @@ section#info div#infotext a {
   display: none;
 }
 
+.step-mobile {
+  display: none;
+}
+
 section#stepone {
   display: flex;
 }
@@ -324,6 +328,10 @@ section#stepthree div#stepthreetext p {
   line-height: 36px;
 }
 
+section#infotwo {
+  display: none;
+}
+
 section#faq {
   display: flex;
   justify-content: center;
@@ -358,10 +366,12 @@ section#faq .faqWrapper .accordion i {
   font-size: 30px;
 }
 section#faq .faqWrapper .panel {
-  margin-top: 16px;
+  max-height: 0;
+  overflow: hidden;
   font-family: roboto;
   font-size: 14px;
   line-height: 20px;
+  transition: all 0.2s ease-out;
 }
 section#faq .faqWrapper hr {
   margin: 0;
@@ -438,6 +448,9 @@ footer .footerlinks ul {
 }
 footer .footerlinks ul a {
   color: #fff;
+}
+footer .footerlinks ul a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -712,7 +725,7 @@ footer .footerlinks ul a {
     margin: 32px auto;
     padding: 0 24px;
     min-width: 327px;
-    max-width: 550px;
+    max-width: 580px;
     box-sizing: border-box;
     width: 100%;
     display: block;
@@ -722,11 +735,154 @@ footer .footerlinks ul a {
     font-weight: bold;
   }
 
+  h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  p {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .getstarted {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .getstarted a {
+    color: #000;
+    text-decoration: underline;
+    opacity: 0.87;
+  }
+  .getstarted .material-icons {
+    font-size: 18px;
+  }
+
+  .step-mobile {
+    width: 323px;
+    display: grid;
+    grid-gap: 16px;
+  }
+
+  section#stepone {
+    flex-direction: column;
+    padding: 0 24px;
+    align-items: center;
+  }
+  section#stepone div#steponeimg {
+    justify-content: center;
+    background: #fff;
+    margin-bottom: 16px;
+  }
   section#stepone div#steponeimg .main {
     display: none;
   }
   section#stepone div#steponeimg .mobile {
     display: block;
+  }
+  section#stepone div#steponetext {
+    display: none;
+  }
+
+  section#steptwo {
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    background: #fff;
+  }
+  section#steptwo .slideshow {
+    width: 328px;
+    height: 272px;
+    min-width: 328px;
+    margin-bottom: 16px;
+    background: #FFE4E7;
+    border-radius: 0;
+  }
+  section#steptwo div#steptwotext {
+    display: none;
+  }
+
+  section#stepthree {
+    flex-direction: column;
+    background: #fff;
+    padding: 0 24px 48px 24px;
+  }
+  section#stepthree div#selectstyle {
+    width: 328px;
+    min-width: 328px;
+    height: 272px;
+    margin-bottom: 16px;
+  }
+  section#stepthree div#stepthreetext {
+    display: none;
+  }
+
+  section#infotwo {
+    display: grid;
+    grid-gap: 16px;
+    background: #7C7EB5;
+    color: #fff;
+    padding: 32px 24px 48px 24px;
+    justify-content: center;
+  }
+  section#infotwo h2 {
+    font-family: Helvetica Neue;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    max-width: 400px;
+  }
+  section#infotwo p {
+    max-width: 400px;
+  }
+  section#infotwo div a {
+    color: #fff;
+  }
+
+  section#faq {
+    padding: 48px 24px 42px 24px;
+    align-items: flex-start;
+  }
+  section#faq .faqWrapper {
+    width: auto;
+  }
+  section#faq .faqWrapper h2 {
+    text-align: start;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  section#faq .faqWrapper .accordion {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  section#faq .faqWrapper .panel {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  footer {
+    padding: 0 24px;
+  }
+  footer div#footertext {
+    padding: 32px 0 64px;
+  }
+  footer hr {
+    width: 100%;
+  }
+  footer .footerlinks {
+    padding: 40px 0 61px;
+    width: 100%;
+  }
+  footer .footerlinks .remove {
+    display: none;
   }
 }
 

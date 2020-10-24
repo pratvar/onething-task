@@ -208,6 +208,9 @@ section#info {
 .steps {
     display: none;
 }
+.step-mobile {
+    display: none;
+}
 section#stepone {
     display: flex;
     div#steponeimg {
@@ -313,6 +316,9 @@ section#stepthree {
         }
     }
 }
+section#infotwo {
+    display: none;
+}
 section#faq {
     display: flex;
     justify-content: center;
@@ -345,10 +351,12 @@ section#faq {
             }
         }
         .panel {
-            margin-top: 16px;
+            max-height: 0;
+            overflow: hidden;
             font-family: roboto;
             font-size: 14px;
             line-height: 20px;
+            transition: all 0.2s ease-out;
         }
         hr {
             margin: 0;
@@ -423,6 +431,9 @@ footer {
             width: 166px;
             a {
                 color: #fff;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -692,7 +703,7 @@ footer {
         margin: 32px auto;
         padding: 0 24px;
         min-width: 327px;
-        max-width: 550px;
+        max-width: 580px;
         box-sizing: border-box;
         width: 100%;
         display: block;
@@ -701,13 +712,145 @@ footer {
         line-height: 150%;
         font-weight: bold;
     }
+    h2 {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    p {
+        font-family: Helvetica Neue;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .getstarted {
+        display: flex;
+        align-items: center;
+        font-family: Helvetica Neue;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        a {
+            color: #000;
+            text-decoration: underline;
+            opacity: 0.87;
+        }
+        .material-icons {
+            font-size: 18px;
+        }
+    }
+    .step-mobile {
+        width: 323px;
+        display: grid;
+        grid-gap: 16px;
+    }
     section#stepone {
+        flex-direction: column;
+        padding: 0 24px;
+        align-items: center;
         div#steponeimg {
+            justify-content: center;
+            background: #fff;
+            margin-bottom: 16px;
             .main {
                 display: none;
             }
             .mobile {
                 display: block;
+            }
+        }
+        div#steponetext {
+            display: none;
+        }
+    }
+    section#steptwo {
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 24px;
+        background: #fff;
+        .slideshow {
+            width: 328px;
+            height: 272px;
+            min-width: 328px;
+            margin-bottom: 16px;
+            background: #FFE4E7;
+            border-radius: 0;
+        }
+        div#steptwotext {
+            display: none;
+        }
+    }
+    section#stepthree {
+        flex-direction: column;
+        background: #fff;
+        padding: 0 24px 48px 24px;
+        div#selectstyle {
+            width: 328px;
+            min-width: 328px;
+            height: 272px;
+            margin-bottom: 16px;
+        }
+        div#stepthreetext {
+            display: none;
+        }
+    }
+    section#infotwo {
+        display: grid;
+        grid-gap: 16px;
+        background: #7C7EB5;
+        color: #fff;
+        padding: 32px 24px 48px 24px;
+        justify-content: center;
+        h2 {
+            font-family: Helvetica Neue;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 140%;
+            max-width: 400px;
+        }
+        p {
+            max-width: 400px;
+        }
+        div {
+            a {
+                color: #fff;
+            }
+        }
+    }
+    section#faq {
+        padding: 48px 24px 42px 24px;
+        align-items: flex-start;
+        .faqWrapper {
+            width: auto;
+            h2 {
+                text-align: start;
+                font-size: 24px;
+                line-height: 150%;
+            }
+            .accordion {
+                font-family: Helvetica Neue;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            .panel {
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+    }
+    footer {
+        padding: 0 24px;
+        div#footertext {
+            padding: 32px 0 64px;
+        }
+        hr {
+            width: 100%;
+        }
+        .footerlinks {
+            padding: 40px 0 61px;
+            width: 100%;
+            .remove {
+                display: none;
             }
         }
     }
