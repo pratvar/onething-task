@@ -53,3 +53,50 @@ function slideshow() {
     }
     setTimeout(slideshow, 2500);
 }
+
+const styles = document.getElementsByClassName('style');
+const preview = document.getElementsByClassName('preview')[0];
+
+let autoPreviewTimer;
+
+autoPreview();
+function autoPreview() {
+    if(styles[0].classList.contains('active')) {
+        styles[0].classList.remove('active');
+        preview.style.backgroundImage = "url('images/style2.svg')";
+        styles[1].classList.add('active');
+    } else if(styles[1].classList.contains('active')) {
+        styles[1].classList.remove('active');
+        preview.style.backgroundImage = "url('images/style3.svg')";
+        styles[2].classList.add('active');
+    } else if(styles[2].classList.contains('active')) {
+        styles[2].classList.remove('active');
+        preview.style.backgroundImage = "url('images/style4.svg')";
+        styles[3].classList.add('active');
+    } else if(styles[3].classList.contains('active')) {
+        styles[3].classList.remove('active');
+        preview.style.backgroundImage = "url('images/style1.svg')";
+        styles[0].classList.add('active');
+    }
+    autoPreviewTimer = setTimeout(autoPreview, 2500);
+}
+
+for(let i = 0; i < styles.length; i++) {
+    let style = styles[i];
+    style.addEventListener('click', function() {
+        clearTimeout(autoPreviewTimer);
+        for(let j = 0; j < styles.length; j++) {
+            styles[j].classList.remove('active');
+        }
+        style.classList.add('active');
+        if(style.classList.contains('style1')) {
+            preview.style.backgroundImage = "url('images/style1.svg')";
+        } else if(style.classList.contains('style2')) {
+            preview.style.backgroundImage = "url('images/style2.svg')";
+        } else if(style.classList.contains('style3')) {
+            preview.style.backgroundImage = "url('images/style3.svg')";
+        } else if(style.classList.contains('style4')) {
+            preview.style.backgroundImage = "url('images/style4.svg')";
+        }
+    })
+}

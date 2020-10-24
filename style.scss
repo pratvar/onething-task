@@ -340,10 +340,54 @@ section#stepthree {
     align-items: center;
     background: #F7F3FF;
     div#selectstyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 480px;
         width: 600px;
         margin-right: 12px;
-        background-color: #e5e2eb;
+        .preview {
+            background-image: url('images/style1.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 389.89px;
+            height: 243.76px;
+            padding-top: 77.44px;
+            padding-left: 27.91px;
+            box-sizing: border-box;
+            transition: all 0.2s;
+            z-index: 1;
+        }
+        .shadow {
+            position: absolute;
+            margin-bottom: 100px;
+            width: 350px;
+            height: 210px;
+            background: #000;
+            box-shadow: 0 5px 50px 5px #9f9da7;
+        }
+        .selector {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 58.86px;
+            width: 384.89px;
+            a {
+                cursor: pointer;
+            }
+            .active:after {
+                content: '';
+                position: absolute;
+                background: transparent;
+                width: 72px;
+                height: 45px;
+                margin-top: -4px;
+                margin-left: -72px;
+                border: 2px solid #424242;
+                border-radius: 5px;
+            }
+        }
     }
     div#stepthreetext {
         display: grid;
@@ -852,6 +896,43 @@ footer {
             min-width: 328px;
             height: 272px;
             margin-bottom: 16px;
+            background: #F7F3FF;
+            padding-top: 30px;
+            box-sizing: border-box;
+            justify-content: start;
+            .preview {
+                width: 237.54px;
+                height: 148.46px;
+                padding-top: 40px;
+                padding-left: 17px;
+                img {
+                    width: 200px;
+                }
+            }
+            .shadow {
+                width: 220px;
+                height: 130px;
+                margin: 0;
+                margin-top: 10px;
+                box-shadow: 0 0 20px 5px #9f9da7;
+            }
+            .selector {
+                margin-top: 36.54px;
+                width: 237.54px;
+                a {
+                    width: 40px;
+                    height: 24px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .active:after {
+                    width: 42px;
+                    height: 26px;
+                    margin-left: -43px;
+                    margin-top: -3px;
+                }
+            }
         }
         div#stepthreetext {
             display: none;
@@ -905,6 +986,10 @@ footer {
         padding: 0 24px;
         div#footertext {
             padding: 32px 0 64px;
+            span#footerheading {
+                font-size: 30px;
+                line-height: 45px;
+            }
         }
         hr {
             width: 100%;
